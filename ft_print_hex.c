@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 11:09:34 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/06 18:14:41 by nait-bou         ###   ########.fr       */
+/*   Created: 2023/12/06 18:33:40 by nait-bou          #+#    #+#             */
+/*   Updated: 2023/12/06 19:26:37 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*creat_str(unsigned long val, int *j)
 	return (str);
 }
 
-int	ft_print_pointer(unsigned long value)
+int	ft_print_hex(unsigned long value, int lp)
 {
 	int		i;
 	int		*pi;
@@ -48,11 +48,10 @@ int	ft_print_pointer(unsigned long value)
 		if ((value % 16) < 10)
 			str[i] = (value % 16) + 48;
 		if ((value % 16) > 9)
-			str[i] = (value % 16) + 87;
+			str[i] = (value % 16) + lp;
 		i--;
 		value /= 16;
 	}
-	i += ft_print_str("0x");
 	i += ft_print_str(str);
 	free(str);
 	return (i);
