@@ -3,31 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 19:50:49 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/06 18:14:56 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:57:51 by hax              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_nbr(int *nbr)
+int	ft_print_nbr(int nbr)
 {
 	int	i;
+	int	j;
+	int	t;
 
 	i = 0;
-	ft_putnbr_fd(*nbr, 1);
-	if (*nbr == -2147483648)
+	j = nbr;
+	t = nbr;
+	ft_putnbr_fd(t, 1);
+	if (j == -2147483648)
 		return (11);
-	if (*nbr < 0)
+	if (j < 0)
 	{
-		*nbr *= (-1);
+		j *= (-1);
 		i++;
 	}
-	while (*nbr != 0)
+	while (j != 0)
 	{
-		*nbr /= 10;
+		j /= 10;
 		i++;
 	}
 	return (i);

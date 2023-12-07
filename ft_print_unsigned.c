@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:51:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/06 19:37:03 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 02:04:43 by hax              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,18 @@ static void	ft_putnbr(unsigned long n)
 		ft_putchar(n + '0');
 }
 
-int	ft_print_unsigned(unsigned long *nbr)
+int	ft_print_unsigned(unsigned long nbr)
 {
 	unsigned long	i;
+	unsigned long	j;
+
 
 	i = 0;
-	ft_putnbr(*nbr);
-	while (*nbr != 0)
+	j = nbr;
+	ft_putnbr(j);
+	while (nbr != 0)
 	{
-		*nbr /= 10;
+		nbr /= 10;
 		i++;
 	}
 	return (i);
