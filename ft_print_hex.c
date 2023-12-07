@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:33:40 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/06 19:26:37 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:02:23 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	ft_print_hex(unsigned long value, int lp)
 		i--;
 		value /= 16;
 	}
+	i = 0;
 	i += ft_print_str(str);
 	free(str);
 	return (i);

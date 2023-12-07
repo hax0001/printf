@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:51:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 02:04:43 by hax              ###   ########.fr       */
+/*   Updated: 2023/12/07 19:21:40 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	ft_print_unsigned(unsigned long nbr)
 {
 	unsigned long	i;
 	unsigned long	j;
-
 
 	i = 0;
 	j = nbr;

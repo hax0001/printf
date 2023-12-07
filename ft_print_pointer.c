@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:09:34 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/06 18:14:41 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:02:16 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	ft_print_pointer(unsigned long value)
 		i--;
 		value /= 16;
 	}
+	i = 0;
 	i += ft_print_str("0x");
 	i += ft_print_str(str);
 	free(str);
