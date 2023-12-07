@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:51:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 19:21:40 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 21:38:44 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	ft_print_unsigned(unsigned long nbr)
 	i = 0;
 	j = nbr;
 	ft_putnbr(j);
+	if (nbr == 0)
+		return (1);
 	while (nbr != 0)
 	{
 		nbr /= 10;

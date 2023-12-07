@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 18:33:40 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 19:02:23 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 21:43:28 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,14 @@ int	ft_print_hex(unsigned long value, int lp)
 
 	i = 0;
 	pi = &i;
+	if (value == 0)
+	{
+		ft_putstr_fd("0", 1);
+		return (1);
+	}
 	str = creat_str(value, pi);
 	if (!str)
 		return (0);
-	if (value == 0)
-		ft_putstr_fd("0", 1);
 	while (value != 0 && i >= 0)
 	{
 		if ((value % 16) < 10)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hax <hax@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:10:30 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 02:17:12 by hax              ###   ########.fr       */
+/*   Updated: 2023/12/07 21:45:55 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	ft_printf(const char *format, ...)
 	va_list	arg;
 
 	i = 0;
+	if (!format)
+		return (0);
 	va_start(arg, format);
 	while (*format != '\0')
 	{

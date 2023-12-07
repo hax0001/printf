@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:09:34 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 19:02:16 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/07 21:41:19 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ int	ft_print_pointer(unsigned long value)
 	str = creat_str(value, pi);
 	if (!str)
 		return (0);
-	if (value == 0)
-		ft_putstr_fd("0", 1);
 	while (value != 0 && i >= 0)
 	{
 		if ((value % 16) < 10)
