@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:10:30 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 23:04:22 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/10 19:21:58 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static int	ft_check(va_list arg, char format)
 	if (format == 'p')
 		i += ft_print_pointer(va_arg(arg, unsigned long));
 	if (format == 'u')
-		i += ft_print_unsigned(va_arg(arg, unsigned long));
+		i += ft_print_unsigned(va_arg(arg, unsigned int));
 	if (format == 'x')
-		i += ft_print_hex(va_arg(arg, unsigned long), 87);
+		i += ft_print_hex(va_arg(arg, unsigned int), 87);
 	if (format == 'X')
-		i += ft_print_hex(va_arg(arg, unsigned long), 55);
+		i += ft_print_hex(va_arg(arg, unsigned int), 55);
 	return (i);
 }
 

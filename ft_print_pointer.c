@@ -6,53 +6,78 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:09:34 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 21:41:19 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/10 19:38:44 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static char	*creat_str(unsigned long val, int *j)
+static void	reverse(char *s)
 {
 	int		i;
-	char	*str;
+	int		len;
+	char	tmp;
 
 	i = 0;
-	while (val != 0)
+	len = ft_strlen(s);
+	len--;
+	while (i < len)
 	{
+		tmp = s[i];
+		s[i] = s[len];
+		s[len] = tmp;
+		len--;
 		i++;
-		val /= 16;
 	}
-	str = malloc(i * sizeof(char));
-	if (!str)
-		return (NULL);
-	*j = i - 1;
-	return (str);
+}
+
+static int	len_nbr(unsigned long n)
+{
+	long	i;
+
+	i = 0;
+	while (n)
+	{
+		n /= 16;
+		i++;
+	}
+	return (i);
+}
+
+static int	ft_print_hp(unsigned long n, int d)
+{
+	char	*result;
+	long	i;
+	int		len;
+
+	if (n == 0)
+		return (ft_print_char('0'), 1);
+	i = 0;
+	len = len_nbr(n) + 1;
+	result = malloc(len);
+	while (n)
+	{
+		if ((n % 16) >= 0 && (n % 16) <= 9)
+			result[i++] = ((n % 16) + 48);
+		else if ((n % 16) >= 10 && (n % 16) <= 15)
+			result[i++] = ((n % 16) + d);
+		n /= 16;
+	}
+	result[i] = '\0';
+	reverse(result);
+	ft_print_str(result);
+	free(result);
+	return (len - 1);
 }
 
 int	ft_print_pointer(unsigned long value)
 {
-	int		i;
-	int		*pi;
-	char	*str;
+	int	i;
 
-	i = 0;
-	pi = &i;
-	str = creat_str(value, pi);
-	if (!str)
-		return (0);
-	while (value != 0 && i >= 0)
-	{
-		if ((value % 16) < 10)
-			str[i] = (value % 16) + 48;
-		if ((value % 16) > 9)
-			str[i] = (value % 16) + 87;
-		i--;
-		value /= 16;
-	}
+	if (value == 0)
+		return (ft_print_str("0x0"));
 	i = 0;
 	i += ft_print_str("0x");
-	i += ft_print_str(str);
-	free(str);
+	i += ft_print_hp(value, 87);
 	return (i);
 }

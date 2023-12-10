@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:51:46 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 21:38:44 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/10 19:06:25 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-static void	ft_putnbr(unsigned long n)
+static void	ft_putnbr(unsigned int n)
 {
 	if (n >= 10)
 	{
@@ -28,7 +28,7 @@ static void	ft_putnbr(unsigned long n)
 		ft_putchar(n + '0');
 }
 
-int	ft_print_unsigned(unsigned long nbr)
+int	ft_print_unsigned(unsigned int nbr)
 {
 	unsigned long	i;
 	unsigned long	j;
