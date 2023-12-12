@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 19:50:49 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 21:45:00 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/12 11:14:24 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_print_nbr(int nbr)
 	i = 0;
 	j = nbr;
 	t = nbr;
-	ft_putnbr_fd(t, 1);
+	ft_putnbr(t);
 	if (j == -2147483648)
 		return (11);
 	if (j == 0)

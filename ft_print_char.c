@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:45:59 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/07 19:22:07 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/12 11:09:43 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_print_char(char c)
 {
-	ft_putchar_fd(c, 1);
+	ft_putchar(c);
 	return (1);
 }
