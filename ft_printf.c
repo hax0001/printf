@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:10:30 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/10 19:21:58 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/12 23:02:29 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ int	ft_printf(const char *format, ...)
 	va_list	arg;
 
 	i = 0;
-	if (!format)
-		return (-1);
 	va_start(arg, format);
 	while (*format != '\0')
 	{
@@ -57,6 +55,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 			i += ft_print_char(*format);
+
 		format++;
 	}
 	va_end(arg);

@@ -6,7 +6,7 @@
 /*   By: nait-bou <nait-bou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:09:34 by nait-bou          #+#    #+#             */
-/*   Updated: 2023/12/10 19:38:44 by nait-bou         ###   ########.fr       */
+/*   Updated: 2023/12/12 22:43:58 by nait-bou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	ft_print_pointer(unsigned long value)
 	int	i;
 
 	if (value == 0)
-		return (ft_print_str("0x0"));
+		return (ft_print_str("(nil)"));
 	i = 0;
 	i += ft_print_str("0x");
 	i += ft_print_hp(value, 87);
